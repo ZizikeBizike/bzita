@@ -1,0 +1,21 @@
+article{
+    width: 700px;
+    margin: 0 auto;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h2{
+    color: gray;
+    font-weight: lighter;
+}
+
+p{
+    font-style: italic;
+    font-family: 'Raleway', sans-serif;
+}
+img{
+    width: 100%;
+}

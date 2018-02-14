@@ -1,0 +1,52 @@
+body{
+    font-family: 'Merriweather', serif;
+    background-image: url("topography.png");   
+}
+
+div{
+    width: 80%;
+    padding: 0 10%; 
+}
+
+nav{
+    text-align: right;
+    background-color: #333333;
+    padding: 20px;
+}
+
+img{
+    float: left;
+    padding-left: 9%;
+}
+
+h1{
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p{
+    font-family: Consolas, Courier;
+}
+
+a{
+    color: #ff0099;
+    padding: 20px;
+}
+
+.pink{
+    color: #ff0099;
+}
+.center{
+    text-align: center;
+    margin: 40px;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+
