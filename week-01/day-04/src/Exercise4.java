@@ -102,10 +102,10 @@ public class Exercise4 {
 
 
         String k = "Apple";
+
         //fill the k variable with its cotnent 4 times
 
-
-        System.out.println(k);
+        System.out.println(k + k + k + k);
 
 
     }
