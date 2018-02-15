@@ -2,6 +2,8 @@ public class Exercise2 {
 
     public static void main(String[] args) {
 
+        // 04 - IntroduceYourself
+
         // Write a program that prints a few details to the terminal window about you
         // It should print each detail to a new line.
         //  - Your name
@@ -16,6 +18,9 @@ public class Exercise2 {
         System.out.println("Zita Banszegi");
         System.out.println(42);
         System.out.println(1.64);
+
+
+        // 05 - TwoNumbers
 
         // Create a program that prints a few operations on two numbers: 22 and 13
 
@@ -37,6 +42,8 @@ public class Exercise2 {
         System.out.println(22.00 / 13.00);
         System.out.println(22 / 13);
         System.out.println(22 % 13);
+
+        // 06 - CodingHours
 
         // An average Green Fox attendee codes 6 hours daily
         // The semester is 17 weeks long
