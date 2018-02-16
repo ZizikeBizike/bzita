@@ -64,12 +64,12 @@ public class Exercise4 {
 
         // tell if the double of g2 is bigger than g1 (print as a boolean)
 
-        compare = g1 > (g2 * g2);
+        compare = g1 < (g2 * 2);
         System.out.println(compare);
 
         /*another solution:
 
-        if (g1 > (g2 * g2)){
+        if (g1 < (g2 * 2)){
             System.out.println(true);
         } else {
             System.out.println(false);
@@ -79,7 +79,7 @@ public class Exercise4 {
         int h = 135798745;
         // tell if it has 11 as a divisor (print as a boolean)
 
-        compare = (h / 11) != 0;
+        compare = (h % 11) == 0;
         System.out.println(compare);
 
 
@@ -97,7 +97,7 @@ public class Exercise4 {
 
         // tell if j is dividable by 3 or 5 (print as a boolean)
 
-        compare = (j / 3) !=0 || (j / 5) !=0;
+        compare = (j % 3) == 0 || (j % 5) == 0;
         System.out.println(compare);
 
 
