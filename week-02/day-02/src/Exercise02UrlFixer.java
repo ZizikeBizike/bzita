@@ -27,6 +27,6 @@ public class Exercise02UrlFixer {
         url2 = url2.replace ("ps//", "ps://");
         url2 = url2.replace ("bots", "odds");
 
-        System.out.println(url);
+        System.out.println(url2);
     }
 }
