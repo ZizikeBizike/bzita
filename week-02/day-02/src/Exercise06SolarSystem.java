@@ -9,19 +9,16 @@ public class Exercise06SolarSystem{
         // Insert it into the correct position
         // Create a method called putSaturn() which has list parameter and returns the correct list.
 
-
-
         System.out.println(putSaturn(planetList));
         // Expected output: "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus", "Neptune", "Saturn"
-
     }
 
-    public static String putSaturn(ArrayList<String> planetList) {
+    public static ArrayList<String> putSaturn(ArrayList<String> planetList) {
 
         String missingPlanet = "Saturn";
 
         planetList.add(5, missingPlanet);
 
-        return planetList.toString();
+        return planetList;
     }
 }
