@@ -4,19 +4,23 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Exercise11PurpleSteps {
+public class Exercise12PurpleSteps3D {
     public static void mainDraw(Graphics graphics) {
         // Reproduce this:
-        // [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
+        // [https://github.com/greenfox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
+
         int size = 10;
-        int offset = 10;
+        int offset = 20;
         graphics.setColor(new Color (153, 51, 255));
 
-        for (int i = 0; i < 19; i++){
-            offset = offset + 10;
+        for(int i = 0; i < 6; i++){
+            offset = offset + size;
+            size = size + 10;
             graphics.fillRect(offset, offset, size, size);
         }
     }
+
+
 
     // Don't touch the code below
     static int WIDTH = 320;
