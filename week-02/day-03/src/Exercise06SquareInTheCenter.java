@@ -4,25 +4,12 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Exercise05Horizontal {
+public class Exercise06SquareInTheCenter {
+
     public static void mainDraw(Graphics graphics) {
-        // Create a line drawing function that takes 2 parameters:
-        // The x and y coordinates of the line's starting point
-        // and draws a 50 long horizontal line from that point.
-        // Draw 3 lines with that function. Use loop for that.
+        // Draw a green 10x10 square to the canvas' center.
 
-        int x = 50;
-        int y = 50;
-
-        for (int i =0; i < 3; i++){
-            y = y + 50;
-            drawingMethod(graphics, x, y);
-        }
-    }
-
-    public static void drawingMethod(Graphics graphics, int x, int y){
-
-        graphics.drawLine(x, y, x + 50, y);
+    graphics.drawRect(WIDTH / 2 - 5, HEIGHT / 2 - 5, 10, 10);
     }
 
     // Don't touch the code below
@@ -43,6 +30,7 @@ public class Exercise05Horizontal {
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
             mainDraw(graphics);
+
         }
     }
 }
