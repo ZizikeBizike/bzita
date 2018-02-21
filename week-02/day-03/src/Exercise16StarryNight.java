@@ -18,7 +18,7 @@ public class Exercise16StarryNight {
         for (int i = 0; i < 100; i++) {
             int x = (int) (Math.random() * WIDTH);
             int y = (int) (Math.random() * HEIGHT);
-            int color = (int) (Math.random() * 255);
+            int color = (int) (Math.random() * 255);        //a szürke árnyalatainál R,G és B ua vagy majdnem ua
             graphics.setColor(new Color (color, color, color));
             graphics.fillRect(x, y, size, size);
         }
