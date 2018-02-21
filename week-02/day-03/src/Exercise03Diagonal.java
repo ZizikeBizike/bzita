@@ -4,19 +4,16 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Exercise02ColoredBox {
+public class Exercise03Diagonal {
 
     public static void mainDraw(Graphics graphics) {
-        // Draw a box that has different colored lines on each edge.
+        // Draw the canvas' diagonals.
+        // If it starts from the upper-left corner it should be green, otherwise it should be red.
+    graphics.setColor(Color.green);
+    graphics.drawLine(0, 0, 320, 343);
+    graphics.setColor(Color.red);
+    graphics.drawLine(0, 343, 320, 0);
 
-        graphics.setColor(Color.red);
-        graphics.drawLine(20, 20, 220, 20);
-        graphics.setColor(Color.green);
-        graphics.drawLine(220, 20, 220, 200);
-        graphics.setColor(Color.yellow);
-        graphics.drawLine(220, 200, 20, 200);
-        graphics.setColor(Color.blue);
-        graphics.drawLine(20, 200, 20, 20);
 
     }
 
