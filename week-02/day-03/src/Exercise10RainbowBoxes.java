@@ -13,8 +13,8 @@ public class Exercise10RainbowBoxes {
 
         int size = 320;
 
-        for (int i = 0; i < 10; i++){
-            size = size - 40;
+        for (int i = 0; i < 320 / 20; i++){
+            size = size - 20;
             int colorR = (int) (Math.random() * 255);
             int colorG = (int) (Math.random() * 255);
             int colorB = (int) (Math.random() * 255);
@@ -25,7 +25,6 @@ public class Exercise10RainbowBoxes {
     public static void drawSquare(Graphics graphics, int size, int colorR, int colorG, int colorB){
         graphics.setColor(new Color(colorR, colorG, colorB));
         graphics.fillRect((WIDTH / 2) - (size / 2), (HEIGHT / 2) - (size / 2), size, size);
-
     }
 
     // Don't touch the code below
