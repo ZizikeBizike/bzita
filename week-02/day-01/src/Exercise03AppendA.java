@@ -13,9 +13,11 @@ public class Exercise03AppendA {
 
         String am = "kuty";
         appendA(am);
+        System.out.println(appendA(am));
     }
-    public static void appendA(String word){
+    public static String appendA(String word){
 
-        System.out.println(word + "a");
+        word = word + "a";
+        return word;
     }
 }
