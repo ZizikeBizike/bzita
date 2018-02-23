@@ -5,15 +5,16 @@ import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class EnvelopeStar {
+
     public static void mainDraw(Graphics graphics) {
 
         graphics.setColor(Color.green);
 
-        for (int i = 0; i < WIDTH/2; i = i + WIDTH/30) {
+        for (int i = 0; i < WIDTH/2 + 1 ; i = i + WIDTH/30) {
 
             graphics.drawLine(WIDTH/2, i, WIDTH/2 - i, HEIGHT/2);
             graphics.drawLine(WIDTH/2, i, WIDTH/2 + i, HEIGHT/2);
-            graphics.drawLine(i, HEIGHT/2, WIDTH/2, HEIGHT/2 + i);
+            graphics.drawLine(WIDTH/2, HEIGHT/2 + i, i, HEIGHT/2);
             graphics.drawLine(WIDTH/2, HEIGHT/2 + i, WIDTH - i, HEIGHT/2);
         }
     }
