@@ -8,14 +8,11 @@ public class LinePlay {
     public static void mainDraw(Graphics graphics) {
 
         for (int i = 0; i < WIDTH; i = i + WIDTH/20) {
-            int endX = i;
-            int startY = i;
-            int startX = i;
-            int endY = i;
+
             graphics.setColor(Color.green);
-            graphics.drawLine(0, startY, endX, HEIGHT);
+            graphics.drawLine(0, i, i, HEIGHT);
             graphics.setColor(Color.magenta);
-            graphics.drawLine(startX, 0, WIDTH, endY);
+            graphics.drawLine(i, 0, WIDTH, i);
         }
     }
     // Don't touch the code below
