@@ -21,6 +21,6 @@ public class Exercise10ElementFinder{
       return "Hoorray";
     } else {
       return "Noooooo";
-      }
+    }
   }
 }
