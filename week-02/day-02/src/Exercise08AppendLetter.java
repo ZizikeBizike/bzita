@@ -18,45 +18,4 @@ public class Exercise08AppendLetter {
     }
     return nimals;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /*public static List <String> appendA(List <String> nimals) {
-
-    for (int i = 0; i < nimals.size(); i++) {
-      nimals.set(i, nimals.get(i) + "a");
-    }
-    return nimals;
-  }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
