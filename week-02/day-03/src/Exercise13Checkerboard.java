@@ -16,7 +16,7 @@ public class Exercise13Checkerboard {
                 if ((j + i) % 2 == 1){
                     graphics.setColor(Color.black);
                 } else if ((j + i) % 2 == 0){
-                    graphics.setColor(Color.white);
+                    graphics.setColor(Color.red);
                 }
                 graphics.fillRect(x, y, size, size);
                 x = x + size;
