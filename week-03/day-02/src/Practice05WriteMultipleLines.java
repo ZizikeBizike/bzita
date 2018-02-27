@@ -32,6 +32,7 @@ public class Practice05WriteMultipleLines {
     try{
       Files.write(realPath, text);
     } catch (Exception e){
+      System.out.println("Could not write myFile");
     }
   }
 }
