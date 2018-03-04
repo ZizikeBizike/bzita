@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class Exercise09CandyShop{
+public class Exercise09CandyShop {
 
-  public static void main(String... args){
+  public static void main(String... args) {
     ArrayList<Object> arrayList = new ArrayList<Object>();
     arrayList.add("Cupcake");
     arrayList.add(2);
@@ -17,8 +17,7 @@ public class Exercise09CandyShop{
     System.out.println(sweets(arrayList));
     // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
   }
-  public static List<Object> sweets (List<Object> listToCorrect){
-
+  public static List<Object> sweets(List<Object> listToCorrect) {
     listToCorrect.set(1, "Croissant");
     listToCorrect.set(3, "Ice cream");
     return listToCorrect;

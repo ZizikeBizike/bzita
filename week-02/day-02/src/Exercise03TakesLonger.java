@@ -1,6 +1,6 @@
 public class Exercise03TakesLonger {
 
-  public static void main(String... args){
+  public static void main(String... args) {
 
     String quote = "Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.";
 
@@ -10,7 +10,6 @@ public class Exercise03TakesLonger {
 
     String missingPart = "always takes longer than ";
     quote = quote.substring(0, 21) + missingPart + quote.substring(21);
-
     System.out.println(quote);
   }
 }

@@ -1,9 +1,8 @@
 import java.util.*;
 
-public class Exercise06SolarSystem{
+public class Exercise06SolarSystem {
 
-  public static void main(String... args){
-
+  public static void main(String... args) {
     ArrayList<String> planetList = new ArrayList<String>(Arrays.asList("Mercury","Venus","Earth","Mars","Jupiter","Uranus","Neptune"));
 
     // Saturn is missing from the planetList
@@ -14,9 +13,7 @@ public class Exercise06SolarSystem{
 
     // Expected output: "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus", "Neptune", "Saturn"
   }
-
-  public static ArrayList<String> putSaturn (ArrayList<String> listOfPlanets){
-
+  public static ArrayList<String> putSaturn (ArrayList<String> listOfPlanets) {
     String missingPlanet = "Saturn";
     listOfPlanets.add(5, missingPlanet);
     return listOfPlanets;

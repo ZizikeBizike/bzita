@@ -1,5 +1,9 @@
+import java.util.Scanner;
+
 public class Exercise13Calculator {
+
   public static void main(String... args) {
+
     // Create a simple calculator application which reads the parameters from the prompt
     // and prints the result to the prompt.
     // It should support the following operations,
@@ -16,5 +20,28 @@ public class Exercise13Calculator {
     // Waits for the user input
     // Print the result to the prompt
     // Exit
+
+    System.out.println("Please type in the expression: operation operand operand (eg: + 6 3)");
+    calculate();
+  }
+  public static void calculate() {
+    Scanner scanner = new Scanner(System.in);
+    String operation = scanner.next();
+    int operand1 = scanner.nextInt();
+    int operand2 = scanner.nextInt();
+    int result = 0;
+
+    if (operation.equals("+")) {
+      result = operand1 + operand2;
+    } else if (operation.equals("-")) {
+      result = operand1 - operand2;
+    } else if (operation.equals("*")) {
+      result = operand1 * operand2;
+    } else if (operation.equals("/")) {
+      result = operand1 / operand2;
+    } else if (operation.equals("%")) {
+      result = operand1 % operand2;
+    }
+    System.out.println("The result is " + result);
   }
 }

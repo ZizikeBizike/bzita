@@ -1,6 +1,6 @@
 public class Exercise02UrlFixer {
 
-  public static void main(String... args){
+  public static void main(String... args) {
 
     // Accidentally I got the wrong URL for a funny subreddit. It's probably "odds" and not "bots"
     // Also, the URL is missing a crutial component, find out what it is and insert it too!
@@ -12,7 +12,6 @@ public class Exercise02UrlFixer {
     url = url.replace ("bots", "odds");
     String toAdd = ":";
     url = url.substring(0, 5) + toAdd + url.substring(5);
-
     System.out.println(url);
 
     //Another version:
@@ -21,7 +20,6 @@ public class Exercise02UrlFixer {
 
     url2 = url2.replace ("ps//", "ps://");
     url2 = url2.replace ("bots", "odds");
-
     System.out.println(url2);
   }
 }

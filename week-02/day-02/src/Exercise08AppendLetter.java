@@ -10,10 +10,9 @@ public class Exercise08AppendLetter {
 
     System.out.println(appendA(far));
   }
+  public static List<String> appendA (List<String> nimals) {
 
-  public static List<String> appendA (List<String> nimals){
-
-    for (int i = 0; i < nimals.size(); i++){
+    for (int i = 0; i < nimals.size(); i++) {
       nimals.set(i, (nimals.get(i) + "a"));
     }
     return nimals;

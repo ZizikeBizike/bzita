@@ -1,9 +1,8 @@
 import java.util.*;
 
-public class Exercise07MatchMaking{
+public class Exercise07MatchMaking {
 
-  public static void main(String... args){
-
+  public static void main(String... args) {
     ArrayList<String> girls = new ArrayList<String>(Arrays.asList("Eve","Ashley","Bözsi","Kat","Jane"));
     ArrayList<String> boys = new ArrayList<String>(Arrays.asList("Joe","Fred","Béla","Todd","Neef","Jeff"));
 
@@ -12,18 +11,16 @@ public class Exercise07MatchMaking{
 
     System.out.println(makingMatches(girls, boys));
     }
-
-    public static ArrayList<String> makingMatches(ArrayList <String> girls, ArrayList<String> boys){
-
+  public static ArrayList<String> makingMatches(ArrayList <String> girls, ArrayList<String> boys) {
     ArrayList<String> pairs = new ArrayList<String>();
 
-    if (girls.size() <= boys.size()){
+    if (girls.size() <= boys.size()) {
       for (int i = 0; i < girls.size(); i++) {
         pairs.add(girls.get(i));
         pairs.add(boys.get(i));
       }
     } else {
-      for (int i = 0; i < boys.size(); i++){
+      for (int i = 0; i < boys.size(); i++) {
         pairs.add(girls.get(i));
         pairs.add(boys.get(i));
       }
