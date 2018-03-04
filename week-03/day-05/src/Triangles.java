@@ -7,7 +7,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class Triangles {
 
   public static void mainDraw(Graphics graphics) {
-    drawFractalTriangle (graphics,0, 0, WIDTH, 0, WIDTH/2, 865, 7);
+    drawFractalTriangle (graphics,0, 0, WIDTH, 0, WIDTH/2, 865, 8);
   }
   public static void drawFractalTriangle(Graphics graphics, int x1, int y1, int x2, int y2, int x3, int y3, int depth) {
     if (depth == 0) {

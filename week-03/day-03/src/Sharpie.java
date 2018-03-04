@@ -11,10 +11,10 @@ public class Sharpie {
   private Float width;
   private Float inkAmount;
 
-  public Sharpie(String color, Float width){
+  public Sharpie(String color, Float width) {
     this.inkAmount = 100f;
   }
-  public void use(){
+  public void use() {
     inkAmount--;
   }
 }

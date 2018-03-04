@@ -22,7 +22,7 @@ public class Dominoes {
     return dominoes;
   }
 
-  public static List orderingDominoes(List <Domino>sixDominoes) {
+  public static List orderingDominoes(List<Domino>sixDominoes) {
 
     for(int i = 0; i < sixDominoes.size(); i++) {
       for(int j = 1; j < sixDominoes.size(); j++) {

@@ -15,7 +15,7 @@ public class Practice05WriteMultipleLines {
   // to the file and each line should be "apple"
   // The function should not raise any error if it could not write the file.
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
 
     String myPath = "myFile.txt";
     String myWord = "apple";
@@ -23,15 +23,15 @@ public class Practice05WriteMultipleLines {
 
     writesInFile(myPath, myWord, myNumber);
   }
-  public static void writesInFile (String path, String word, int number){
+  public static void writesInFile (String path, String word, int number) {
     Path realPath = Paths.get(path);
-    List<String> text = new ArrayList();
+    List<String> text = new ArrayList<>();
     for (int i = 0; i < number; i++) {
       text.add(word);
     }
     try{
       Files.write(realPath, text);
-    } catch (Exception e){
+    } catch (Exception e) {
       System.out.println("Could not write myFile");
     }
   }

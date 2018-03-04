@@ -1,5 +1,4 @@
 import java.nio.file.*;
-import java.io.IOException;
 
 public class Practice03CountLines {
 
@@ -8,23 +7,22 @@ public class Practice03CountLines {
   // It should return zero if it can't open the file, and
   // should not raise any error.
 
-  public static void main(String[] args){
-    String fileName = "file.txt";
+  public static void main(String[] args) {
+    String fileName = "linesToCount.txt";
     System.out.println(lineCounter(fileName));
   }
 
-  public static int lineCounter (String file){
-
-    Path filePath = Paths.get("file");
-    int lines = 0;
+  public static int lineCounter(String nameOfFileToCount) {
     try {
-      for (String linesCounter : Files.readAllLines(filePath)) {
-        lines++;
-        System.out.println(lines);
+      int counter = 0;
+      Path filePath = Paths.get(nameOfFileToCount);
+      for (String linesToCount : Files.readAllLines(filePath)) {
+        counter++;
       }
-      return lines;
-    } catch (Exception e){
+      return counter;
+    } catch (Exception e) {
       return 0;
     }
   }
 }
+

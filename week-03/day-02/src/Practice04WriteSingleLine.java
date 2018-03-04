@@ -12,11 +12,11 @@ public class Practice04WriteSingleLine {
     // If the program is unable to write the file,
     // then it should print an error message like: "Unable to write file: my-file.txt"
 
-    List<String> line = Arrays.asList("Zita");
+    List<String> myName = Arrays.asList("Zita");
     Path myFilePath = Paths.get("my-file.txt");
     try {
-      Files.write(myFilePath, line);
-    } catch (Exception e){
+      Files.write(myFilePath, myName);
+    } catch (Exception e) {
       System.out.println("Unable to write file: my-file.txt");
     }
   }

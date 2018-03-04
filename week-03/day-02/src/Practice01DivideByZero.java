@@ -7,15 +7,16 @@ public class Practice01DivideByZero {
   // and prints the result
   // It should print "fail" if the parameter is 0
 
-  public static void main(String[] args){
-
+  public static void main(String[] args) {
     System.out.println("Please give an integer");
     Scanner scanner = new Scanner(System.in);
+
     int divisor = scanner.nextInt();
     int dividend = 10;
     try {
-      System.out.println(dividend / divisor);
-    } catch (ArithmeticException e){
+      int result = dividend / divisor;
+      System.out.println(result);
+    } catch (ArithmeticException e) {
       System.out.println("fail");
     }
   }

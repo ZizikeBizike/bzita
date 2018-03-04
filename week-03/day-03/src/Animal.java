@@ -11,18 +11,19 @@ public class Animal {
   private int hunger;
   private int thirst;
 
-  public Animal(){
+  public Animal() {
     this.hunger = 50;
     this.thirst = 50;
   }
-  public void eat(){
+  public void eat() {
     hunger--;
   }
-  public void drink(){
+  public void drink() {
     thirst--;
   }
-  public void play(){
+  public void play() {
     hunger++;
     thirst++;
   }
 }
+

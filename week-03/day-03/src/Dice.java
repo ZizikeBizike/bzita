@@ -50,7 +50,7 @@ public class Dice {
         }
       }
     }
-    for (int i = 0; i < myDice.getCurrent().length; i++){
+    for (int i = 0; i < myDice.getCurrent().length; i++) {
       System.out.println(myDice.getCurrent(i));
     }
   }
