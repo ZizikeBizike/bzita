@@ -5,12 +5,10 @@ public class Exercise16AppendA {
   // - Add all elements an `"a"` at the end
 
   public static void main(String[] args) {
-
     String[] nimals = {"kuty", "macsk", "cic"};
-
     for (int i = 0; i < nimals.length; i++) {
       nimals[i] = nimals[i] + "a";
-      System.out.print(nimals[i] + ", ");
+      System.out.println(nimals[i]);
     }
   }
 }

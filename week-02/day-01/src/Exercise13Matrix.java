@@ -10,9 +10,7 @@ public class Exercise13Matrix {
   //
   // - Print this two dimensional array to the output
 
-
-  public static void main(String[] args){
-
+  public static void main(String[] args) {
     int[][] matrix = new int[4][4];
 
     for (int row = 0; row < matrix.length; row++) {
@@ -24,7 +22,7 @@ public class Exercise13Matrix {
         }
           System.out.print(matrix[row][column]);                  //print one line
       }
-        System.out.println("");                             //start a new line when row number changes
+        System.out.println("");                             //start a new line when row index changes
     }
   }
 }

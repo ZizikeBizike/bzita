@@ -6,18 +6,15 @@ public class Exercise04Summing {
   //   until the given parameter and returns with an integer
 
   public static void main(String[] args) {
-
-    int givenNumber = 10;
-    System.out.println(summing(givenNumber));
+    int numberToSumUntil = 10;
+    System.out.println(sum(numberToSumUntil));
   }
-
-  public static int summing(int gN) {
-
-    int sum = 0;
-    for (int i = 1; i < gN + 1; i++) {
-      sum = sum + i;
-      }
-      return sum;
+  public static int sum (int givenNumber) {
+    int sumOfNumbers = 0;
+    for (int i = 1; i <= givenNumber; i++) {
+      sumOfNumbers += i;
+    }
+    return sumOfNumbers;
   }
 }
 

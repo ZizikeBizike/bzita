@@ -6,14 +6,12 @@ public class Exercise19ReverseList {
   // - Print the elements of the reversed `aj`
 
   public static void main(String[] args) {
-
     int[] aj = {3, 4, 5, 6, 7};
-    int[] reversedAj = new int[5];
+    int[] reversedAj = new int[aj.length];
 
     for (int i = 0; i < aj.length; i++) {
       reversedAj[i] = aj[aj.length - 1 - i];
     }
-
     aj = reversedAj;
 
     for (int i = 0; i < aj.length; i++) {

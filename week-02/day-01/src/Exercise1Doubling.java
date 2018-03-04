@@ -7,14 +7,10 @@ public class Exercise1Doubling {
     // - Print the result of `doubling(ak)`
 
     int ak = 123;
-    doubling(ak);
-    System.out.println(doubling(ak));
+    System.out.println(doubling (ak));
   }
-
-  public static int doubling(int number){
-
-    number = number * 2;
-    return number;
+  public static int doubling (int numberToDouble) {
+    return 2 * numberToDouble;
   }
 }
 
