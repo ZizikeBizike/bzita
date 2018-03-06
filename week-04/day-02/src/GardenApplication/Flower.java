@@ -1,19 +1,19 @@
 package GardenApplication;
 
-public class Flower {
+public class Flower extends Plant {
 
-  private int waterAmount;
-  private String color;
+  public Flower(String color) {
+    this.color = color;
+    waterAmount = 0;
+    absorb = 0.75;
+  }
 
-  public void needsWater () {
-    if (waterAmount < 5){
+  public void needsWaterFlower () {
+    if (waterAmount < 5) {
       System.out.println("The " + color + " flower needs water");
     } else {
       System.out.println("The " + color + " flower doesn't need water");
     }
   }
 
-  public Flower(){
-    waterAmount = 0;
-  }
 }

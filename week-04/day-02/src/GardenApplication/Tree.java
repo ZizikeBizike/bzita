@@ -1,19 +1,18 @@
 package GardenApplication;
 
-public class Tree {
+public class Tree extends Plant {
 
-  private int waterAmount;
-  private String color;
+  public Tree(String color){
+    this.color = color;
+    waterAmount = 0;
+    absorb = 0.4;l
+  }
 
-  public void needsWater(){
-    if (waterAmount < 10){
+  public void needsWaterTree() {
+    if (waterAmount < 10) {
       System.out.println("The " + color + " tree needs water");
     } else {
       System.out.println("The " + color + " tree doesn't need water");
     }
-  }
-
-  public Tree(){
-    waterAmount = 0;
   }
 }
