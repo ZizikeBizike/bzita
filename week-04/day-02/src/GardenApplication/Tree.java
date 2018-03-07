@@ -5,7 +5,7 @@ public class Tree extends Plant {
   public Tree(String color){
     this.color = color;
     waterAmount = 0;
-    absorb = 0.4;l
+    absorb = 0.4;
   }
 
   public void needsWaterTree() {

@@ -1,6 +1,6 @@
 package GreenFoxOrganization;
 
-public class Student extends Person {
+public class Student extends Person implements Cloneable {
 
   public String previousOrganization;
   public int skippedDays;
@@ -31,5 +31,9 @@ public class Student extends Person {
     super();//with this I have the variables as in Person Class, this time I have empty parenthesis
     previousOrganization = "The School of Life";
     skippedDays = 0;
+  }
+
+  public Object clone () throws CloneNotSupportedException {
+    return super.clone();
   }
 }

@@ -2,7 +2,7 @@ package GreenFoxOrganization;
 
 import java.util.ArrayList;
 
-public class Cohort {
+public class Cohort implements Cloneable {
   private String name;
   private ArrayList<Student> students;
   private ArrayList<Mentor> mentors;
@@ -66,5 +66,11 @@ public class Cohort {
     awesome.addMentor(mentor);
     awesome.addMentor(gandhi);
     awesome.info();
+
+    try {
+      Student studentToClone = new Student("John", 20, "male", "BME");
+      Student clonedStudent = (Student)studentToClone.clone();
+      clonedStudent.introduce();
+    } catch (CloneNotSupportedException c) {}
   }
 }

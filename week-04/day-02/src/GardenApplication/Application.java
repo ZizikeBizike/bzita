@@ -17,7 +17,7 @@ public class Application {
     Tree orange = new Tree("orange");
     plants.add(orange);
 
-    needsWaterFlower(waterAmountPour);
-    needsWaterTree(waterAmountPour);
+    //needsWaterFlower(waterAmountPour);
+    //needsWaterTree(waterAmountPour);
   }
 }
