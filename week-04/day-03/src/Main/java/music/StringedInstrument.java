@@ -13,17 +13,10 @@ public abstract class StringedInstrument extends Instrument {
     this.numberOfStrings = numberOfStrings;
   }
 
-  public StringedInstrument(int numberOfStrings){
-    this.numberOfStrings = numberOfStrings;
-  }
-
-  public StringedInstrument() {
-  }
-
   @Override
-  public void play(){
+  public void play() {
     System.out.println(name + ", a " + numberOfStrings + ("-stringed instrument that goes ") + sound());
   }
-  abstract String sound();
 
+  abstract String sound();
 }

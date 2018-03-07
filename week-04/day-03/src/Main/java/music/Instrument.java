@@ -8,8 +8,5 @@ public abstract class Instrument {
     this.name = name;
   }
 
-  protected Instrument() {
-  }
-
   abstract void play();
 }
