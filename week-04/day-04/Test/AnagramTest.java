@@ -11,7 +11,7 @@ public class AnagramTest {
   }
 
   @Test
-  public void TestIsAnagramOneWord() {
+  public void testIsAnagramOneWord() {
     assertTrue(testAnagram.isAnagram("dog", "dog"));
   }
 
@@ -21,22 +21,22 @@ public class AnagramTest {
   }
 
   @Test
-  public void TestIsAnagramLongWords() {
+  public void testIsAnagramLongWords() {
     assertTrue(testAnagram.isAnagram("abcDfKijreLtTHA", "dCBfakIJtaHlrET"));
   }
 
   @Test
-  public void TestIsAnagramNegative() {
+  public void testIsAnagramNegative() {
     assertFalse(testAnagram.isAnagram("abcDfKijreLtTH", "dCBfakIJtaHlrET"));
   }
 
   @Test (expected = java.lang.AssertionError.class)
-  public void TestIsAnagramEmptyString() {
+  public void testIsAnagramEmptyString() {
     assertTrue(testAnagram.isAnagram("abcDfKijreLtTH", ""));
   }
 
   @Test (expected = java.lang.NullPointerException.class)
-  public void TestIsAnagramNull() {
+  public void testIsAnagramNull() {
     assertTrue(testAnagram.isAnagram("abcDfKijreLtTH", null));
   }
 }
