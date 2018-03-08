@@ -11,12 +11,12 @@ public class Sum {
     sum.add(8);
     sum.add(11);
 
-    System.out.println(sumOfNumbers(sum));
+    System.out.println(sumNumbers(sum));
   }
 
-  public static int sumOfNumbers(ArrayList<Integer> inputNumbers){
+  public static int sumNumbers(ArrayList<Integer> inputNumbers) {
     int result = 0;
-    for(int i = 0; i < inputNumbers.size(); i++){
+    for(int i = 0; i < inputNumbers.size(); i++) {
       result += inputNumbers.get(i);
     }
     return result;
