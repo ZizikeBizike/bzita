@@ -1,23 +1,25 @@
 package GardenApplication;
 
-import java.util.ArrayList;
-
 public class Application {
 
-  public void main(String[] args) {
-    ArrayList<Plant> plants = new ArrayList<>();
+  public static void main(String[] args) {
 
-    Flower yellow = new Flower("yellow");
-    plants.add(yellow);
-    Flower blue = new Flower("blue");
-    plants.add(blue);
+    Garden myGarden = new Garden();
 
-    Tree purple = new Tree("purple");
-    plants.add(purple);
-    Tree orange = new Tree("orange");
-    plants.add(orange);
+    Plant yellowFlower = new Flower("yellow");
+    Plant blueFlower = new Flower("blue");
+    Plant purpleTree = new Tree("purple");
+    Plant orangeTree = new Tree("orange");
 
-    //needsWaterFlower(waterAmountPour);
-    //needsWaterTree(waterAmountPour);
+    myGarden.add(yellowFlower);
+    myGarden.add(blueFlower);
+    myGarden.add(purpleTree);
+    myGarden.add(orangeTree);
+
+    myGarden.getGardenStatus();
+    myGarden.waterPlants(40);
+    myGarden.getGardenStatus();
+    myGarden.waterPlants(70);
+    myGarden.getGardenStatus();
   }
 }

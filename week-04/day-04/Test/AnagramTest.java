@@ -11,8 +11,13 @@ public class AnagramTest {
   }
 
   @Test
-  public void testIsAnagramOneWord() {
+  public void testIsAnagramSameWord() {
     assertTrue(testAnagram.isAnagram("dog", "dog"));
+  }
+
+  @Test
+  public void testIsAnagramSameLettersDifferentAmounts() {
+    assertFalse(testAnagram.isAnagram("abcd", "dcbbaa"));
   }
 
   @Test
@@ -38,5 +43,40 @@ public class AnagramTest {
   @Test (expected = java.lang.NullPointerException.class)
   public void testIsAnagramNull() {
     assertTrue(testAnagram.isAnagram("abcDfKijreLtTH", null));
+  }
+
+  @Test
+  public void testIsAnagramLetterOnly() {
+    assertTrue(testAnagram.isAnagram("d", "d"));
+  }
+
+  @Test
+  public void testIsAnagramDifferentNumberOfLetters() {
+    assertFalse(testAnagram.isAnagram("dd", "d"));
+  }
+
+  @Test
+  public void testIsAnagramNumbers() {
+    assertTrue(testAnagram.isAnagram("23d5", "5d32"));
+  }
+
+  @Test
+  public void testIsAnagramSpecialCharacters() {
+    assertTrue(testAnagram.isAnagram("*%=;!", "!*;=%"));
+  }
+
+  @Test
+  public void testIsAnagramStringsWithEqualAmountOfSpaces() {
+    assertTrue(testAnagram.isAnagram("  ", "  "));
+  }
+
+  @Test
+  public void testIsAnagramStringsWithDifferentAmountOfSpaces() {
+    assertFalse(testAnagram.isAnagram("  ", "   "));
+  }
+
+  @Test
+  public void testIsAnagramWordsWithSpace() {
+    assertFalse(testAnagram.isAnagram("Hello", "hell o"));
   }
 }

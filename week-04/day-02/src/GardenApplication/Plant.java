@@ -1,26 +1,26 @@
 package GardenApplication;
 
-import java.util.ArrayList;
-
 public class Plant {
+  protected String color;
+  protected int waterAmount;
+  protected String type;
+  protected boolean needsWater;
 
-  public String color;
-  public double waterAmount;
-  public double absorb;
-
-  private ArrayList<Flower> flowers;
-  private ArrayList<Tree> trees;
-
-  public void addFlower(Flower flower) {
-    flowers.add(flower);
+  public Plant (String color) {
+    this.color = color;
+    this.type = type;
+    this.needsWater = true;
   }
 
-  public void addTree(Tree tree) {
-    trees.add(tree);
+  public String printNeedsWater() {
+    if (needsWater) {
+      return " needs water";
+    } else {
+      return " doesn't need water";
+    }
   }
 
-  public Plant() {
-    flowers = new ArrayList<>();
-    trees = new ArrayList<>();
+  public String getStatus() {
+    return "The " + color + " " + type + printNeedsWater();
   }
 }

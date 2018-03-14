@@ -6,7 +6,7 @@ public class Anagram {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Please give a word");
+    System.out.println("Please give one word");
     String word1 = scanner.next();
     System.out.println("Please give another word");
     String word2 = scanner.next();
