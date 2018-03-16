@@ -1,6 +1,6 @@
 package Comparator;
 
-public class Domino implements Comparable <Domino> {
+public class Domino implements Comparable <Domino>, Printable {
 
   private final int[] values;
 
@@ -20,5 +20,9 @@ public class Domino implements Comparable <Domino> {
   @Override
   public String toString() {
     return "[" + values[0] + ", " + values[1] + "]";
+  }
+
+  public void printAllFields(){
+    System.out.println("[" + values[0] + ", " + values[1] + "]");
   }
 }
