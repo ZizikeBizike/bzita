@@ -28,12 +28,16 @@ public class FleetOfThings {
 
     List fleet1 = new ArrayList();
     fleet1.add(thing1);
-    fleet.add(thing2);
-    fleet.add(thing3);
-    fleet.add(thing4);
+    fleet1.add(thing2);
+    fleet1.add(thing3);
+    fleet1.add(thing4);
 
     Collections.sort(fleet1);
 
     System.out.println(fleet1);
+
+    //for (Thing t: things) {
+    //  t.printAllFields();
+    //}
   }
 }

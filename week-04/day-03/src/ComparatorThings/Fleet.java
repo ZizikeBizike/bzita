@@ -2,7 +2,7 @@ package ComparatorThings;
 
 import java.util.ArrayList;
 
-public class Fleet {
+public class Fleet implements Printable {
 
   private ArrayList<Thing> things;
 
@@ -21,5 +21,13 @@ public class Fleet {
       result += (i+1) + ". " + things.get(i) + "\n";
     }
     return result;
+  }
+
+  public void printAllFields(){
+    String result = "";
+    for(int i = 0; i < things.size(); i++) {
+      result += (i+1) + ". " + things.get(i) + "\n";
+    }
+    System.out.println(result);
   }
 }

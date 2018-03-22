@@ -4,14 +4,20 @@ import java.util.ArrayList;
 
 public class AircraftCarrier {
 
-  ArrayList<Aircraft> listOfAircrafts = new ArrayList<>();
+  private int storeOfAmmo;
+  private int initialCarrierAmmo;
+  private int currentCarrierAmmo;
+  private int healthPoint;
+  private int allAmmoAmountNeeded = 0;
+  private int totalDamage;
 
-  protected int storeOfAmmo;
-  int initialCarrierAmmo;
-  int currentCarrierAmmo;
-  int healthPoint;
-  int allAmmoAmountNeeded = 0;
-  int totalDamage;
+  public AircraftCarrier(int initialCarrierAmmo, int healthPoint) {
+    this.initialCarrierAmmo = initialCarrierAmmo;
+    currentCarrierAmmo = initialCarrierAmmo;
+    this.healthPoint = healthPoint;
+  }
+
+  ArrayList<Aircraft> listOfAircrafts = new ArrayList<>();
 
   public void addAircraft(Aircraft aircraft) {
     listOfAircrafts.add(aircraft);
@@ -19,7 +25,7 @@ public class AircraftCarrier {
 
   public int countAllAmmoAmountNeeded() {
     for (int i = 0; i < listOfAircrafts.size(); i++) {
-      allAmmoAmountNeeded += (listOfAircrafts.get(i).maxAmmo - listOfAircrafts.get(i).currentAmmo);
+      allAmmoAmountNeeded += (listOfAircrafts.get(i).getMaxAmmo() - listOfAircrafts.get(i).getCurrentAmmo());
     }
     return allAmmoAmountNeeded;
   }
@@ -32,16 +38,16 @@ public class AircraftCarrier {
     } else if (allAmmoAmountNeeded <= currentCarrierAmmo) {
       for (int i = 0; i < listOfAircrafts.size(); i++) {
         listOfAircrafts.get(i).refill(currentCarrierAmmo);
-        currentCarrierAmmo = listOfAircrafts.get(i).remainingAmmo;
+        currentCarrierAmmo = listOfAircrafts.get(i).getRemainingAmmo();
       }
     } else {
       for (int i = 0; i < listOfAircrafts.size(); i++) {
-        if (listOfAircrafts.get(i).isPriority) {
+        if (listOfAircrafts.get(i).isPriority()) {
           listOfAircrafts.get(i).refill(currentCarrierAmmo);
-          currentCarrierAmmo = listOfAircrafts.get(i).remainingAmmo;
-        } else if (!listOfAircrafts.get(i).isPriority) {
+          currentCarrierAmmo = listOfAircrafts.get(i).getRemainingAmmo();
+        } else if (!listOfAircrafts.get(i).isPriority()) {
           listOfAircrafts.get(i).refill(currentCarrierAmmo);
-          currentCarrierAmmo = listOfAircrafts.get(i).remainingAmmo;
+          currentCarrierAmmo = listOfAircrafts.get(i).getRemainingAmmo();
         }
       }
     }
@@ -50,7 +56,7 @@ public class AircraftCarrier {
   public int fight(AircraftCarrier aircraftCarrier) {
     for (int i = 0; i < listOfAircrafts.size(); i++) {
       listOfAircrafts.get(i).fight();
-      totalDamage += listOfAircrafts.get(i).allDamage;
+      totalDamage += listOfAircrafts.get(i).getAllDamage();
     }
     aircraftCarrier.healthPoint -= totalDamage;
     return totalDamage;
@@ -76,12 +82,6 @@ public class AircraftCarrier {
       }
     }
     System.out.println("");
-  }
-
-  public AircraftCarrier(int initialCarrierAmmo, int healthPoint) {
-    this.initialCarrierAmmo = initialCarrierAmmo;
-    currentCarrierAmmo = initialCarrierAmmo;
-    this.healthPoint = healthPoint;
   }
 }
 

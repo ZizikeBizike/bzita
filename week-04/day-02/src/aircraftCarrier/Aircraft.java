@@ -2,17 +2,16 @@ package aircraftCarrier;
 
 public class Aircraft {
 
-  protected int maxAmmo;
-  protected int baseDamage;
-  protected int currentAmmo;
-  protected int damage;
-  protected String type;
-  protected int allDamage;
-  protected boolean isPriority;
-  protected int remainingAmmo;
+  private int maxAmmo;
+  private int baseDamage;
+  private int currentAmmo;
+  private int damage;
+  private String type;
+  private int allDamage;
+  private boolean isPriority;
+  private int remainingAmmo;
 
-  int getActualAmmo() {
-    return currentAmmo;
+  public Aircraft() {
   }
 
   public int fight() {
@@ -42,7 +41,40 @@ public class Aircraft {
     return "Type " + type + ", Ammo: " + currentAmmo + ", Base Damage: " + baseDamage + ", All Damage: " + allDamage;
   }
 
-  public Aircraft() {
-    //actualAmmo = 0;   this is there by default
+
+  public void setMaxAmmo(int maxAmmo) {
+    this.maxAmmo = maxAmmo;
+  }
+
+  public void setBaseDamage(int baseDamage) {
+    this.baseDamage = baseDamage;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  public void setPriority(boolean priority) {
+    isPriority = priority;
+  }
+
+  public int getMaxAmmo() {
+    return maxAmmo;
+  }
+
+  public int getCurrentAmmo() {
+    return currentAmmo;
+  }
+
+  public boolean isPriority() {
+    return isPriority;
+  }
+
+  public int getRemainingAmmo() {
+    return remainingAmmo;
+  }
+
+  public int getAllDamage() {
+    return allDamage;
   }
 }

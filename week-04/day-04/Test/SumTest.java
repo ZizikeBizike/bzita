@@ -28,7 +28,6 @@ public class SumTest {
 
   @Test
   public void sumNumbersMultipleElements() {
-    int sumTestList;
     for (int i = 0; i < 20; i++) {
       testList.add(i);
     }
@@ -37,7 +36,6 @@ public class SumTest {
 
   @Test (expected = NullPointerException.class)
   public void sumNumbersWithNull() {
-    int sumTestList;
     testList.add(null);
     assertEquals(null, sumTest.sumNumbers(testList));
   }
