@@ -58,30 +58,47 @@ public class AircraftCarrier {
       listOfAircrafts.get(i).fight();
       totalDamage += listOfAircrafts.get(i).getAllDamage();
     }
-    aircraftCarrier.healthPoint -= totalDamage;
+    if (aircraftCarrier.healthPoint <= totalDamage) {
+      aircraftCarrier.healthPoint = 0;
+    } else {
+      aircraftCarrier.healthPoint -= totalDamage;
+    }
     return totalDamage;
   }
 
-  public int sufferDamage() {
-    if (totalDamage > healthPoint) {
-      healthPoint = 0;
+  public String getStatus() {
+    if (healthPoint == 0) {
+      return "It's dead Jim :-(\n";
     } else {
-      healthPoint -= totalDamage;
+      return "HP: " + healthPoint + ", Aircraft count: " + listOfAircrafts.size() + ", Ammo Storage: "
+              + currentCarrierAmmo + ", Total damage: " + totalDamage + "\n" + "Aircrafts:" + "\n"
+              + getStatusOfAircrafts();
     }
-    return healthPoint;
   }
 
-  public void getStatus() {
+  public String getStatusOfAircrafts() {
+    String printableListOfAircrafts = "";
+    for (int i = 0; i < listOfAircrafts.size(); i++) {
+      printableListOfAircrafts += listOfAircrafts.get(i).getStatus() + "\n";
+    }
+    return printableListOfAircrafts;
+  }
+}
+
+
+
+
+  /*public void getStatus() {
     if (healthPoint == 0) {
       System.out.println("It's dead Jim :-(");
     } else {
-      System.out.println("HP: " + healthPoint + ", Aircraft count: " + listOfAircrafts.size() + ", Ammo Storage: " + currentCarrierAmmo + ", Total damage: " + totalDamage);
+      System.out.println("HP: " + healthPoint + ", Aircraft count: " + listOfAircrafts.size() + ", Ammo Storage: "
+              + currentCarrierAmmo + ", Total damage: " + totalDamage);
       System.out.println("Aircrafts:");
       for (int i = 0; i < listOfAircrafts.size(); i++) {
         System.out.println(listOfAircrafts.get(i).getStatus());
       }
     }
     System.out.println("");
-  }
-}
+  }*/
 

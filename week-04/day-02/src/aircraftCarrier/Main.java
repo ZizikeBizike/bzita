@@ -6,7 +6,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    AircraftCarrier aircraftCarrier1 = new AircraftCarrier(200, 3000);
+    AircraftCarrier aircraftCarrier1 = new AircraftCarrier(200, 1000);
 
     Aircraft f35number1 = new F35();
     Aircraft f35number2 = new F35();
@@ -34,26 +34,26 @@ public class Main {
 
     System.out.println("Status of aircrafts and aircraftcarriers at the beginning\n");
 
-    aircraftCarrier1.getStatus();
-    aircraftCarrier2.getStatus();
+    System.out.println(aircraftCarrier1.getStatus());
+    System.out.println(aircraftCarrier2.getStatus());
 
     System.out.println("Status after filling the aircrafts with ammo\n");
 
     aircraftCarrier1.fillAircraft();
     aircraftCarrier2.fillAircraft();
-    aircraftCarrier1.getStatus();
-    aircraftCarrier2.getStatus();
+    System.out.println(aircraftCarrier1.getStatus());
+    System.out.println(aircraftCarrier2.getStatus());
 
     System.out.println("Status after first battle, AircraftCarrier1 attacks\n");
 
     aircraftCarrier1.fight(aircraftCarrier2);
-    aircraftCarrier1.getStatus();
-    aircraftCarrier2.getStatus();
+    System.out.println(aircraftCarrier1.getStatus());
+    System.out.println(aircraftCarrier2.getStatus());
 
     System.out.println("AircraftCarrier2 attacks\n");
 
     aircraftCarrier2.fight(aircraftCarrier1);
-    aircraftCarrier1.getStatus();
-    aircraftCarrier2.getStatus();
+    System.out.println(aircraftCarrier1.getStatus());
+    System.out.println(aircraftCarrier2.getStatus());
   }
 }
