@@ -23,15 +23,7 @@ public class AircraftCarrier {
     listOfAircrafts.add(aircraft);
   }
 
-  public int countAllAmmoAmountNeeded() {
-    for (int i = 0; i < listOfAircrafts.size(); i++) {
-      allAmmoAmountNeeded += (listOfAircrafts.get(i).getMaxAmmo() - listOfAircrafts.get(i).getCurrentAmmo());
-    }
-    return allAmmoAmountNeeded;
-  }
-
   public void fillAircraft() {
-    countAllAmmoAmountNeeded();
     if (currentCarrierAmmo == 0) {
       throw new AmmoException("There is no ammo");
     } else {
