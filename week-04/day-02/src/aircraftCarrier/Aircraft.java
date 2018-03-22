@@ -38,9 +38,9 @@ public class Aircraft {
   }
 
   public String getStatus() {
-    return "Type " + type + ", Ammo: " + currentAmmo + ", Base Damage: " + baseDamage + ", All Damage: " + allDamage;
+    return "Type " + type + ", Ammo: " + currentAmmo + ", Base Damage: " + baseDamage + ", All Damage: "
+            + allDamage;
   }
-
 
   public void setMaxAmmo(int maxAmmo) {
     this.maxAmmo = maxAmmo;

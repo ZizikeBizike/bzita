@@ -34,7 +34,7 @@ public class AircraftCarrier {
     countAllAmmoAmountNeeded();
 
     if (currentCarrierAmmo == 0) {
-      throw new ArithmeticException("There is no ammo");
+      throw new AmmoException("There is no ammo");
     } else if (allAmmoAmountNeeded <= currentCarrierAmmo) {
       for (int i = 0; i < listOfAircrafts.size(); i++) {
         listOfAircrafts.get(i).refill(currentCarrierAmmo);

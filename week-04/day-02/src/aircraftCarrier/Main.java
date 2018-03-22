@@ -6,7 +6,7 @@ public class Main {
 
   public static void main(String[] args) {
 
-    AircraftCarrier aircraftCarrier1 = new AircraftCarrier(200, 1000);
+    AircraftCarrier aircraftCarrier1 = new AircraftCarrier(0, 1000);
 
     Aircraft f35number1 = new F35();
     Aircraft f35number2 = new F35();
