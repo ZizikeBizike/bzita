@@ -32,20 +32,17 @@ public class AircraftCarrier {
 
   public void fillAircraft() {
     countAllAmmoAmountNeeded();
-
     if (currentCarrierAmmo == 0) {
       throw new AmmoException("There is no ammo");
-    } else if (allAmmoAmountNeeded <= currentCarrierAmmo) {
-      for (int i = 0; i < listOfAircrafts.size(); i++) {
-        listOfAircrafts.get(i).refill(currentCarrierAmmo);
-        currentCarrierAmmo = listOfAircrafts.get(i).getRemainingAmmo();
-      }
     } else {
       for (int i = 0; i < listOfAircrafts.size(); i++) {
         if (listOfAircrafts.get(i).isPriority()) {
           listOfAircrafts.get(i).refill(currentCarrierAmmo);
           currentCarrierAmmo = listOfAircrafts.get(i).getRemainingAmmo();
-        } else if (!listOfAircrafts.get(i).isPriority()) {
+        }
+      }
+      for (int i = 0; i < listOfAircrafts.size(); i++) {
+        if (!listOfAircrafts.get(i).isPriority()) {
           listOfAircrafts.get(i).refill(currentCarrierAmmo);
           currentCarrierAmmo = listOfAircrafts.get(i).getRemainingAmmo();
         }

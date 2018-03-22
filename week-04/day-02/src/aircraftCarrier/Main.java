@@ -6,17 +6,17 @@ public class Main {
 
   public static void main(String[] args) {
 
-    AircraftCarrier aircraftCarrier1 = new AircraftCarrier(0, 1000);
+    AircraftCarrier aircraftCarrier1 = new AircraftCarrier(15, 1000);
 
-    Aircraft f35number1 = new F35();
-    Aircraft f35number2 = new F35();
     Aircraft f16number1 = new F16();
     Aircraft f16number2 = new F16();
+    Aircraft f35number1 = new F35();
+    Aircraft f35number2 = new F35();
 
-    aircraftCarrier1.addAircraft(f35number1);
-    aircraftCarrier1.addAircraft(f35number2);
     aircraftCarrier1.addAircraft(f16number1);
     aircraftCarrier1.addAircraft(f16number2);
+    aircraftCarrier1.addAircraft(f35number1);
+    aircraftCarrier1.addAircraft(f35number2);
 
     AircraftCarrier aircraftCarrier2 = new AircraftCarrier(300, 3000);
 
