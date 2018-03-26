@@ -18,7 +18,7 @@ public class Exercise04 {
 
     numbers
             .stream()
-            .filter(n -> n*n > 20)
+            .filter(n -> n * n > 20)
             .map(n -> n + " ")
             .forEach(System.out::print);
   }
