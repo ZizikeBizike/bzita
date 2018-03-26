@@ -20,6 +20,6 @@ public class Exercise07 {
     System.out.println(characterFrequency
             .chars()
             .mapToObj(c -> (char) c)
-            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())));
+            .collect(Collectors.groupingBy(c -> c, Collectors.counting())));
   }
 }
