@@ -4,11 +4,9 @@ import java.util.ArrayList;
 
 public class AircraftCarrier {
 
-  private int storeOfAmmo;
   private int initialCarrierAmmo;
   private int currentCarrierAmmo;
   private int healthPoint;
-  private int allAmmoAmountNeeded = 0;
   private int totalDamage;
 
   public AircraftCarrier(int initialCarrierAmmo, int healthPoint) {

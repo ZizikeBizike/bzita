@@ -33,10 +33,6 @@ public class Aircraft {
     return remainingAmmo;
   }
 
-  public String getType() {
-    return type;
-  }
-
   public String getStatus() {
     return "Type " + type + ", Ammo: " + currentAmmo + ", Base Damage: " + baseDamage + ", All Damage: "
             + allDamage;
@@ -56,14 +52,6 @@ public class Aircraft {
 
   public void setPriority(boolean priority) {
     isPriority = priority;
-  }
-
-  public int getMaxAmmo() {
-    return maxAmmo;
-  }
-
-  public int getCurrentAmmo() {
-    return currentAmmo;
   }
 
   public boolean isPriority() {
