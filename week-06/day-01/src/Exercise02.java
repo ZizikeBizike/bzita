@@ -24,5 +24,13 @@ public class Exercise02 {
             .mapToInt(n -> n)
             .average()
             .ifPresent(System.out::println);
+
+    double oddAverage = numbers
+            .stream()
+            .filter(n -> n % 2 == 1)
+            .mapToInt(n -> n)
+            .average()
+            .getAsDouble();
+    System.out.println(oddAverage);
   }
 }
