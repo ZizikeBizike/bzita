@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloRESTController {
+public class HelloRESTContollerParam {
 
-  @RequestMapping("/greeting")
-
-  public Greeting greetingMethod() {
-    return new Greeting(1, "Hello World!");
+  @RequestMapping("/greetingParam")
+  public Greeting greetingMethod(@RequestParam("name") String name) {
+    return new Greeting(1, "Hello " + name + "!");
   }
 }
+  //http://localhost:8080/greeting?name=Yourname  
