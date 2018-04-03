@@ -20,3 +20,5 @@ public class SpringstartApplication {
 		return "Hello World!";
 	}
 }
+
+// http://localhost:8080/hello

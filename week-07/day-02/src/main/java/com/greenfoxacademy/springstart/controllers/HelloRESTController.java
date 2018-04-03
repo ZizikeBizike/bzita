@@ -13,3 +13,5 @@ public class HelloRESTController {
     return new Greeting(1, "Hello World!");
   }
 }
+
+//http://localhost:8080/greeting

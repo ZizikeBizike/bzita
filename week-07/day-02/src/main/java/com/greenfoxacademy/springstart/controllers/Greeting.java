@@ -1,11 +1,11 @@
 package com.greenfoxacademy.springstart.controllers;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Greeting {
 
   private long id;
   private String content;
-
-  public Greeting() {}
 
   public Greeting(long id, String content) {
     this.id = id;
@@ -20,3 +20,5 @@ public class Greeting {
     return content;
   }
 }
+
+
