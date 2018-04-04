@@ -8,12 +8,14 @@
 <body>
     <table class="table table-striped">
         <tr>
+            <th>Index</th>
             <th>Name</th>
             <th>Balance</th>
             <th>Currency</th>
             <th>AnimalType</th>
         </tr>
         <tr th:each="bankAccount : ${accounts}">
+            <td th:text="${bankAccountStat"} />
             <td th:text="${bankAccount.getName()}" />
             <td th:text="${bankAccount.getBalance()}" />
             <td th:text="${bankAccount.getCurrency()}" />

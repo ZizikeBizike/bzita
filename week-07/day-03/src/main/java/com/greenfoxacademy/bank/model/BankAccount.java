@@ -2,6 +2,7 @@ package com.greenfoxacademy.bank.model;
 
 public class BankAccount {
 
+  private Integer index;
   private String name;
   private double balance;
   private String currency;
@@ -13,6 +14,10 @@ public class BankAccount {
     //balance = String.format("%.2f");
     this.currency = currency;
     this.animalType = animalType;
+  }
+
+  public Integer getIndex() {
+    return index;
   }
 
   public String getName() {
