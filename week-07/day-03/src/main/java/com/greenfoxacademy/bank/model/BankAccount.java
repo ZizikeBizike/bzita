@@ -1,7 +1,5 @@
 package com.greenfoxacademy.bank.model;
 
-import java.text.DecimalFormat;
-
 public class BankAccount {
 
   private String name;
