@@ -20,12 +20,3 @@ public class HelloWebController {
 }
 
 
- /* public Greeting greetingMethod(@RequestParam("name") String name) { //http://localhost:8080/greeting?name=Yourname
-    return new Greeting(1, "Hello " + name + "!");
-  }
-
- @RequestMapping("/web/greeting")
-  public String greeting(Model model) {
-    model.addAttribute("name", " World");
-    return "greeting";
-  }*/
