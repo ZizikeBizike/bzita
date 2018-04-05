@@ -20,7 +20,7 @@ public class DependencyApplication implements CommandLineRunner {
 
 	@Override
 	public void run (String... args) throws Exception {
-		System.out.println(printer.log("Hello"));
-		System.out.println(printer.log(myColor.printColor()));
+		printer.log("Hello");
+		printer.log(myColor.printColor());
 	}
 }
