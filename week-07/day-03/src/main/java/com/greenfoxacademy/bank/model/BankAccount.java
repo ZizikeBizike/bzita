@@ -53,4 +53,12 @@ public class BankAccount {
   public void setAnimalType(String animalType) {
     this.animalType = animalType;
   }
+
+  public Boolean getKing() {
+    return isKing;
+  }
+
+  public void setKing(Boolean king) {
+    isKing = king;
+  }
 }

@@ -4,21 +4,39 @@
     <title>Thymeleaf Exercise #</title>
     <link rel="stylesheet" th:href="@{/style.css}" />
     <meta charset="utf-8" />
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+        .king {
+            color: gold;
+        }
+        .notking {
+            color: black;
+        }
+    </style>
 </head>
 <body>
-    <table class="table table-striped">
+    <table style="width:60%">
         <tr>
             <th>Index</th>
             <th>Name</th>
             <th>Balance</th>
             <th>Currency</th>
             <th>AnimalType</th>
+            <th>isKing</th>
         </tr>
         <tr th:each="bankAccount : ${accounts}">
+            <td th:text="${bankAccountStat.index} + 1"></td>
             <td th:text="${bankAccount.getName()}" />
             <td th:text="${#numbers.formatDecimal(bankAccount.getBalance(), 1, 2)}" />
             <td th:text="${bankAccount.getCurrency()}" />
             <td th:text="${bankAccount.getAnimalType()}" />
+            <td th:class="${bankAccount.getKing()} ? king : notking" th:text="${bankAccount.getKing()}" />
         </tr>
     </table>
 </body>

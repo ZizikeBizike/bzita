@@ -18,6 +18,7 @@ public class ControllerShowBankAccount {
     model.addAttribute("balance", bankAccount.getBalance());
     model.addAttribute("currency", bankAccount.getCurrency());
     model.addAttribute("animalType", bankAccount.getAnimalType());
+    model.addAttribute("isKing", bankAccount.getKing());
 
     return "showAccount";
   }
@@ -26,15 +27,14 @@ public class ControllerShowBankAccount {
   public String showAll(Model model) {
 
     ArrayList<BankAccount> bankAccounts = new ArrayList<>(Arrays.asList (
-            new BankAccount("Simba", 2000, "Zebra", "lion", true),
-            new BankAccount("Mufasa", 1191, "Zebra", "lion", false),
+            new BankAccount("Simba", 2000, "Zebra", "lion", false),
+            new BankAccount("Mufasa", 1191, "Zebra", "lion", true),
             new BankAccount("Timon", 30, "Gazella", "meerkat", false),
             new BankAccount("Pumbaa", 2840, "Zebra", "warthog", false),
             new BankAccount("Rafiki", 127, "Gazella", "mandrill", false)
     ));
 
     model.addAttribute("accounts", bankAccounts);
-
-   return "showAccountList";
+    return "showAccountList";
   }
 }
