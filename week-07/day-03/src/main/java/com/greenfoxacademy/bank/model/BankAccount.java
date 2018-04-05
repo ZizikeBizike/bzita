@@ -7,13 +7,15 @@ public class BankAccount {
   private double balance;
   private String currency;
   private String animalType;
+  private Boolean isKing;
 
-  public BankAccount(String name, double balance, String currency, String animalType) {
+  public BankAccount(String name, double balance, String currency, String animalType, boolean isKing) {
     this.name = name;
     this.balance = balance;
     //balance = String.format("%.2f");
     this.currency = currency;
     this.animalType = animalType;
+    this.isKing = isKing;
   }
 
   public Integer getIndex() {

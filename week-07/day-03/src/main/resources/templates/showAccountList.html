@@ -15,12 +15,12 @@
             <th>AnimalType</th>
         </tr>
         <tr th:each="bankAccount : ${accounts}">
-            <td th:text="${bankAccountStat"} />
             <td th:text="${bankAccount.getName()}" />
-            <td th:text="${bankAccount.getBalance()}" />
+            <td th:text="${#numbers.formatDecimal(bankAccount.getBalance(), 1, 2)}" />
             <td th:text="${bankAccount.getCurrency()}" />
             <td th:text="${bankAccount.getAnimalType()}" />
         </tr>
     </table>
 </body>
 </html>
+
