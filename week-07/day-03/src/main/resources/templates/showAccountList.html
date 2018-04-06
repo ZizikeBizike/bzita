@@ -21,19 +21,19 @@
     </style>
 </head>
 <body>
-    <table style="width:60%">
+    <table style="width:50%">
         <tr>
             <th>Index</th>
             <th>Name</th>
             <th>Balance</th>
             <th>Currency</th>
             <th>AnimalType</th>
-            <th>isKing</th>
+            <th>Is king?</th>
         </tr>
         <tr th:each="bankAccount : ${accounts}">
-            <td th:text="${bankAccountStat.index} + 1"></td>
+            <td th:text="${bankAccountStat.index} + 1" />
             <td th:text="${bankAccount.getName()}" />
-            <td th:text="${#numbers.formatDecimal(bankAccount.getBalance(), 1, 2)}" />
+            <td th:text="${#numbers.formatDecimal(bankAccount.getBalance(), 1, 2, 'POINT')}" />
             <td th:text="${bankAccount.getCurrency()}" />
             <td th:text="${bankAccount.getAnimalType()}" />
             <td th:class="${bankAccount.getKing()} ? king : notking" th:text="${bankAccount.getKing()}" />
