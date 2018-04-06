@@ -12,6 +12,4 @@ public class ControllerHTMLception {
     model.addAttribute("sentence", "\"This is an <em>HTML</em> text. <b>Enjoy yourself!</b>\"");
     return "enjoy";     //in this case it is the name of the html file (not the endpoint)
   }
-
-
 }
