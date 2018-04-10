@@ -19,8 +19,5 @@ public class ConnectionwithmysqlApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		todoRepository.save(new Todo("Go with the project", false));
-		todoRepository.save(new Todo("Eat something good", true));
-		todoRepository.save(new Todo("Finish the project", false));
 	}
 }
