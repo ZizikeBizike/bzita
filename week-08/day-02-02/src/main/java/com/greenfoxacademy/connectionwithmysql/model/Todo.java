@@ -22,6 +22,10 @@ public class Todo {
   public Todo() {
   }
 
+  public Todo(String title) {
+    this.title = title;
+  }
+
   public long getId() {
     return id;
   }

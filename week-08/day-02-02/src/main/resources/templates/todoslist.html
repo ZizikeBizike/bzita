@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title>Title</title>
     <style>
-        th, td {
+        td {
             border: 1px solid darkgrey;
         }
         td {
@@ -19,6 +19,7 @@
 </head>
 <body>
     <h1 th:text="'TODOS FOR TODAY: '"></h1>
+    <p><a th:href="@{'/todo/add'}">Add new todo</a></p>
     <table>
         <tr>
             <th>ID</th>
@@ -31,6 +32,7 @@
             <td th:text="${todo.getTitle()}"></td>
             <td th:text="${todo.isDone()}"></td>
             <td th:text="${todo.isUrgent()}"></td>
+            <td><a th:href="@{/{id}/delete (id = ${todo.getId()})}">delete</a></td>
         </tr>
     </table>
 </body>
