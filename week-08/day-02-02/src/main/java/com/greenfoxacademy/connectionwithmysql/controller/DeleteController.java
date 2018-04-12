@@ -14,7 +14,6 @@ public class DeleteController {
 
   @RequestMapping("/{id}/delete")
   public String delete(@PathVariable("id") long id) {
-
     todoRepository.deleteById(id);
     return "redirect:/todo/list";
   }

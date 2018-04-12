@@ -5,8 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value="/todo")
@@ -25,4 +24,17 @@ public class TodoController {
     }
     return "todoslist";
   }
+
+  @GetMapping(value={"/search", "/list/search"})
+  public String searchByTitle(Model model, @RequestParam("todoName") String todoName) {
+    model.addAttribute("todos", todoRepository.findByTitle(todoName));
+    return"todoslist";
+  }
+
+
+  /*@PostMapping(value={"/{todoName}", "/list/{todoName}"})
+  public String searchByTitle(Model model, @PathVariable("todoName") String todoName) {
+    model.addAttribute("todos", todoRepository.findByTitle(todoName));
+    return("redirect:/todo/list");
+  }*/
 }
