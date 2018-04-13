@@ -10,8 +10,12 @@ import java.util.Optional;
 public interface TodoRepository extends CrudRepository<Todo, Long> {
 
   public List<Todo> findBydone(boolean bool);
-
+  public List<Todo> findByUrgent(boolean bool);
   public List<Todo> findByTitle(String title);
+  public List<Todo> findAllByOrderById();
+  public List<Todo> findByUrgentOrderById(boolean bool);
+  public List<Todo> findBydoneOrderById(boolean bool);
+  public List<Todo> findByTitleOrderById(String title);
 
   //public Todo findByTitle(String title);
 
@@ -19,9 +23,4 @@ public interface TodoRepository extends CrudRepository<Todo, Long> {
 
   /*@Query("SELECT t FROM Todo t where t.title = ?1")
   public Optional<Todo> findByTitle(String title);*/
-
-  /*@Query(value = "SELECT * FROM todos t where t.title = ?0 AND t.description = ?1",
-          nativeQuery=true
-  )
-  public Optional<Todo> findByTitleAndDescription(String title, String description);*/
 }

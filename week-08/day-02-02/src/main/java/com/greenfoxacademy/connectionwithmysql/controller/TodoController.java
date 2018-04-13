@@ -15,26 +15,22 @@ public class TodoController {
   TodoRepository todoRepository;
 
   @RequestMapping(value={"/", "/list"})
-  public String list(Model model, @RequestParam(value = "isActive", required = false) Boolean isDone) {
+  public String list(Model model) {
 
-    if (isDone == null) {
-      model.addAttribute("todos", todoRepository.findAll());
-    } else {
-      model.addAttribute("todos", todoRepository.findBydone(!isDone));
-    }
+    model.addAttribute("todos", todoRepository.findAllByOrderById());
     return "todoslist";
   }
 
   @GetMapping(value={"/search", "/list/search"})
-  public String searchByTitle(Model model, @RequestParam("todoName") String todoName) {
-    model.addAttribute("todos", todoRepository.findByTitle(todoName));
-    return"todoslist";
+  public String searchByTitle(Model model, @RequestParam("searchInput") String searchInput) {
+
+    if(searchInput.equals("urgent")) {
+      model.addAttribute("todos", todoRepository.findByUrgentOrderById(true));
+    } else if (searchInput.equals("active")) {
+      model.addAttribute("todos", todoRepository.findBydoneOrderById(false));
+    } else {
+      model.addAttribute("todos", todoRepository.findByTitleOrderById(searchInput));
+    }
+    return "todoslist";
   }
-
-
-  /*@PostMapping(value={"/{todoName}", "/list/{todoName}"})
-  public String searchByTitle(Model model, @PathVariable("todoName") String todoName) {
-    model.addAttribute("todos", todoRepository.findByTitle(todoName));
-    return("redirect:/todo/list");
-  }*/
 }

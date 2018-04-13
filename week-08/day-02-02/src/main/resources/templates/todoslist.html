@@ -4,6 +4,17 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Title</title>
+    <style>
+        h1, p, ul, table {
+            font-family: Georgia;
+        }
+        h1{
+            font-size: 50px;
+        }
+        p, ul, table {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <div class="page-header">
@@ -11,12 +22,16 @@
     </div>
     <div>
         <form action="#" th:action="@{/todo/list/search}" method="get">
-            <p><input type="text" id="todoName" name="todoName" />
-                <input type="submit" value="Search"></p>
+            <p><input type="text" id="todoName" name="searchInput" />
+                <input type="submit" class="btn btn-primary" value="Search"></p>
         </form>
+        <p>You can see which todos are "active", "urgent" or you can search by Todo title</p>
     </div>
     <div>
-        <p><a th:href="@{'/todo/add'}">Add new todo</a></p>
+        <ul class="nav nav-pills">
+            <li><a th:href="@{'/todo/add'}">Add new todo</a></li>
+            <li><a th:href="@{'/todo/list'}">Show the whole list</a></li>
+        </ul>
     </div>
     <div class="row">
         <div class="col-md-6">
