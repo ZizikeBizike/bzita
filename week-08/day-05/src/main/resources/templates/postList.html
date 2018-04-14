@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reddit</title>
+</head>
+<body>
+    <a th:href="@{'/submit'}">Submit new post</a>
+    <h2>Trending posts</h2>
+    <table>
+        <tr th:each="post: ${posts}">
+            <td th:text="${post.getCounter()}"></td>
+            <td></td>
+            <td th:text="${post.getTitle()}"></td>
+        </tr>
+    </table>
+</body>
+</html>
