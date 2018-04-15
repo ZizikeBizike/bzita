@@ -19,7 +19,7 @@ public class RedditApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		postRepository.save(new Post ("Mokusmanci", "http://mokus.com"));
+		postRepository.save(new Post ("Mokusmanci", "http://wiki.org"));
 		postRepository.save(new Post ("Haliho", "http://haliho.com"));
 		postRepository.save(new Post ("Hejehuja", "http://hejehuja.com"));
 	}

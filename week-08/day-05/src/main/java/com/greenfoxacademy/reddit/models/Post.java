@@ -1,26 +1,28 @@
 package com.greenfoxacademy.reddit.models;
 
-import org.springframework.boot.autoconfigure.web.ResourceProperties;
 
+import org.springframework.stereotype.Component;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Component
 @Entity
 public class Post {
 
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Id
   private long id;
+
   private String title;
   private String url;
-  private int counter;
+  private int rating;
 
   public Post(String title, String url) {
     this.title = title;
     this.url = url;
-    counter = 0;
+    rating = 0;
   }
 
   public Post() {
@@ -50,11 +52,11 @@ public class Post {
     this.url = url;
   }
 
-  public int getCounter() {
-    return counter;
+  public int getRating() {
+    return rating;
   }
 
-  public void setCounter(int counter) {
-    this.counter = counter;
+  public void setRating(int counter) {
+    this.rating = counter;
   }
 }

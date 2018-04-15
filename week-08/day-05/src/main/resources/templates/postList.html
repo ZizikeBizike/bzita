@@ -9,9 +9,10 @@
     <h2>Trending posts</h2>
     <table>
         <tr th:each="post: ${posts}">
-            <td th:text="${post.getCounter()}"></td>
-            <td></td>
-            <td th:text="${post.getTitle()}"></td>
+            <td th:text="${post.getRating()}"></td>
+            <td><a th:href="'/' + ${post.getId()} + '/upVote'" type="button" value="+">+</a></td>
+            <td><a th:href="'/' + ${post.getId()} + '/downVote'" type="button" value="-">-</a></td>
+            <td><a th:href="${post.getUrl()}" th:text="${post.getTitle()}"></a></td>
         </tr>
     </table>
 </body>
