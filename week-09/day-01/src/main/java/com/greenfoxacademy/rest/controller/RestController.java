@@ -1,7 +1,9 @@
 package com.greenfoxacademy.rest.controller;
 
+import com.greenfoxacademy.rest.model.Appenda;
 import com.greenfoxacademy.rest.model.Greeting;
 import com.greenfoxacademy.rest.model.NumberToDouble;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,5 +30,11 @@ public class RestController {
     } else {
       return new Greeting(name, title);
     }
+  }
+
+  @RequestMapping(value="/appenda/{appendable}")
+  public Appenda appendaMethod(@PathVariable String appendable) {
+
+    return new Appenda(appendable);
   }
 }
