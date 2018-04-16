@@ -13,6 +13,4 @@ public class MainController {
   public String frontend() {
     return "index";
   }
-
-
 }
