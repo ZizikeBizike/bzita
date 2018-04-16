@@ -1,15 +1,15 @@
 package com.greenfoxacademy.rest.controller;
 
-import com.greenfoxacademy.rest.model.Appenda;
-import com.greenfoxacademy.rest.model.Greeting;
-import com.greenfoxacademy.rest.model.NumberToDouble;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import com.greenfoxacademy.rest.model.*;
+import com.greenfoxacademy.rest.service.UntilService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
+
+  @Autowired
+  UntilService untilService;
 
   @RequestMapping(value="/doubling", method=RequestMethod.GET)
   public Object doubling (@RequestParam (value = "input", required = false) Integer input) {
@@ -34,7 +34,20 @@ public class RestController {
 
   @RequestMapping(value="/appenda/{appendable}")
   public Appenda appendaMethod(@PathVariable String appendable) {
-
     return new Appenda(appendable);
+  }
+
+  @RequestMapping(value="/dountil/{what}", method=RequestMethod.POST)
+  public Until doUntilMethod(@PathVariable String what, @RequestBody (required = false) Until until) {
+
+    if (until == null){
+      return new Until();
+    } else if (what.equals("sum")) {
+      return untilService.sum(until);
+    } else if (what.equals("factor")) {
+      return untilService.factor(until);
+    } else {
+      return new Until();
+    }
   }
 }
