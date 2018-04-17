@@ -9,6 +9,7 @@ public class NumberToDouble {
   public NumberToDouble(int received) {
     this.received = received;
     this.result = received * 2;
+    this.error = null;
   }
 
   public NumberToDouble() {

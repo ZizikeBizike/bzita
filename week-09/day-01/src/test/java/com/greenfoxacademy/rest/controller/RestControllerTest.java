@@ -14,6 +14,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import java.nio.charset.Charset;
 
@@ -76,10 +77,41 @@ public class RestControllerTest {
   }
 
   @Test
-  public void appendaMethod() {
+  public void appendaMethod() throws Exception {
+    mockMvc
+            .perform(get("/appenda/kuty")
+                    .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.appended").value("kutya"));
   }
 
   @Test
-  public void doUntilMethod() {
+  public void doUntilMethodSumTest() throws Exception {
+    mockMvc
+            .perform(post("/dountil/sum")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content("{\"until\": 5}"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.result").value(15));
+  }
+
+  @Test
+  public void doUntilMethodFactorTest() throws Exception {
+    mockMvc
+            .perform(post("/dountil/factor")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content("{\"until\": 5}"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.result").value(120));
+  }
+
+  @Test
+  public void doUntilMethodNullWhatTest() throws Exception {
+    mockMvc
+            .perform(post("/dountil/")
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .content("{\"until\": 5}"))
+            .andExpect(status().isNotFound())
+            .andExpect(jsonPath("$.error").value("Please provide a number!"));
   }
 }
