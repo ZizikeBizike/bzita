@@ -18,8 +18,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import java.nio.charset.Charset;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @WebAppConfiguration
@@ -57,5 +55,36 @@ public class GardianControllerTest {
                     .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.error").value("I am Groot!"));
+  }
+
+  @Test
+  public void yonduTestWithParameters() throws Exception {
+    mockMvc
+            .perform(get("/yondu?distance=100.0&time=10.0")
+                    .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.distance").value(100.0))
+            .andExpect(jsonPath("$.time").value(10.0))
+            .andExpect(jsonPath("$.speed").value(10.0));
+  }
+
+  @Test
+  public void yonduTestWithTime0() throws Exception {
+    mockMvc
+            .perform(get("/yondu?distance=100.0&time=0.0")
+                    .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.distance").value(100.0))
+            .andExpect(jsonPath("$.time").value(0.0))
+            .andExpect(jsonPath("$.speed").value("Infinity"));
+  }
+
+  @Test
+  public void yonduTestWithoutParameters() throws Exception {
+    mockMvc
+            .perform(get("/yondu")
+                    .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(jsonPath("$.error").value("There is no input parameter"));
+
   }
 }
