@@ -40,9 +40,7 @@ public class RestController {
   @RequestMapping(value="/dountil/{what}", method=RequestMethod.POST)
   public Until doUntilMethod(@PathVariable String what, @RequestBody (required = false) Until until) {
 
-    if (until == null){
-      return new Until();
-    } else if (what.equals("sum")) {
+    if (what.equals("sum")) {
       return untilService.sum(until);
     } else if (what.equals("factor")) {
       return untilService.factor(until);

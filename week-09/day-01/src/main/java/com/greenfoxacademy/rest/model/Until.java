@@ -5,9 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Until {
 
-  @Autowired
-  UntilService untilService;
-
   private int until;
   private int result;
   private String error;
@@ -34,5 +31,13 @@ public class Until {
 
   public void setResult(int result) {
     this.result = result;
+  }
+
+  public String getError() {
+    return error;
+  }
+
+  public void setError(String error) {
+    this.error = error;
   }
 }
