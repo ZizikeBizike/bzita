@@ -13,7 +13,7 @@ public class TodoController {
   @Autowired
   TodoRepository todoRepository;
 
-  @RequestMapping(value={"/", "/list"})
+  @GetMapping(value={"/", "/list"})
   public String list(Model model) {
     model.addAttribute("todos", todoRepository.findAllByOrderById());
     return "todoslist";

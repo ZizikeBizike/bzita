@@ -1,18 +1,20 @@
 package com.greenfoxacademy.connectionwithmysql.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Todo {
+
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Id
   private long id;
   private String title;
   private boolean done;
   private boolean urgent;
+
+  @ManyToOne
+  Assignee assignee;
+
 
   public Todo(String title, boolean urgent) {
     this.title = title;
@@ -56,5 +58,13 @@ public class Todo {
 
   public void setDone(boolean done) {
     this.done = done;
+  }
+
+  public Assignee getAssignee() {
+    return assignee;
+  }
+
+  public void setAssignee(Assignee assignee) {
+    this.assignee = assignee;
   }
 }
