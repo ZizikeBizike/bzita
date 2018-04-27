@@ -1,8 +1,3 @@
-.idea
-out
-*.iml
-*.xml
-
 .DS_Store
 
 # Built application files
@@ -57,4 +52,6 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+
+
 
