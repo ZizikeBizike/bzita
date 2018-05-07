@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchByAuthorActivity">
+    tools:context=".activities.SearchByAuthorActivity">
 
     <EditText
         android:id="@+id/editText2"
@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="none"
-        android:text="Enter an author"
+        android:text="@string/text_author"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
-        android:text="Search"
+        android:text="@string/button_search"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editText2" />

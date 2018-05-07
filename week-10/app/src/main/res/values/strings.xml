@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">OpenLibraryApp</string>
+    <string name="button_subject">Search by subject</string>
+    <string name="button_author">Search by author</string>
+    <string name="button_aBookById">Search a book by Id</string>
+    <string name="search_text">Search for books!</string>
+    <string name="button_search">Search</string>
+    <string name="text_subject">Enter a subject</string>
+    <string name="text_author">Enter an author</string>
+    <string name="text_id">Enter an id</string>
 </resources>

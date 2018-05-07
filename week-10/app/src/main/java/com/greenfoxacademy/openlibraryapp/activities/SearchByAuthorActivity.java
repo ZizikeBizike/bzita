@@ -1,7 +1,9 @@
-package com.greenfoxacademy.openlibraryapp;
+package com.greenfoxacademy.openlibraryapp.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.greenfoxacademy.openlibraryapp.R;
 
 public class SearchByAuthorActivity extends AppCompatActivity {
 

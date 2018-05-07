@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidPractice01</string>
+    <string name="apples_text">Apples</string>
+    <string name="apples_button">Go to bacon</string>
+    <string name="bacon_text">Bacon</string>
+    <string name="bacon_button">Go to apples</string>
+    <string name="apples_edit">Write a message</string>
+</resources>

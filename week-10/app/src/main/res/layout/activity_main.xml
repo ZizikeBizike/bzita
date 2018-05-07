@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
-            android:text="Search for books!"
+            android:text="@string/search_text"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -33,8 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:onClick="findBySubject"
-            android:text="Search by subject"
+            android:onClick="toToSearchBySubject"
+            android:text="@string/button_subject"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             tools:layout_editor_absoluteX="167dp" />
 
@@ -43,8 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:onClick="findByAuthor"
-            android:text="Search by author"
+            android:onClick="goToSearchByAuthor"
+            android:text="@string/button_author"
             app:layout_constraintTop_toBottomOf="@+id/button"
             tools:layout_editor_absoluteX="161dp" />
 
@@ -53,8 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:onClick="findById"
-            android:text="Search a book by id"
+            android:onClick="goToSearchABookById"
+            android:text="@string/button_aBookById"
             app:layout_constraintTop_toBottomOf="@+id/button2"
             tools:layout_editor_absoluteX="16dp" />
     </LinearLayout>

@@ -1,7 +1,9 @@
-package com.greenfoxacademy.openlibraryapp;
+package com.greenfoxacademy.openlibraryapp.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.greenfoxacademy.openlibraryapp.R;
 
 public class SearchBySubjectActivity extends AppCompatActivity {
 
@@ -10,4 +12,6 @@ public class SearchBySubjectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_by_subject);
     }
+
+
 }
