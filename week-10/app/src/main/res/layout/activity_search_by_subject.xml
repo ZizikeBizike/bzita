@@ -8,22 +8,22 @@
     tools:context=".activities.SearchBySubjectActivity">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/subject_editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="@string/text_subject"
         android:inputType="none"
-        android:text="@string/text_subject"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/subject_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/subject_button"
         android:layout_width="86dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -31,24 +31,9 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
         android:text="@string/button_search"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+        app:layout_constraintBaseline_toBaselineOf="@+id/subject_editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText" />
+        app:layout_constraintStart_toEndOf="@+id/subject_editText" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/my_recycler_view"
-        android:layout_width="380dp"
-        android:layout_height="409dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        android:scrollbars="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText">
-
-    </android.support.v7.widget.RecyclerView>
 </android.support.constraint.ConstraintLayout>

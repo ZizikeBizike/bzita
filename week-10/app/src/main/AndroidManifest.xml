@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.greenfoxacademy.openlibraryapp">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,11 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SearchBySubjectActivity"
-            android:parentActivityName=".activities.MainActivity"/>
-        <activity android:name=".activities.SearchByAuthorActivity"
-            android:parentActivityName=".activities.MainActivity"/>
-        <activity android:name=".activities.SearchABookByIdActivity"
-            android:parentActivityName=".activities.MainActivity"/>
+        <activity
+            android:name=".activities.SearchBySubjectActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.SearchByAuthorActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity
+            android:name=".activities.SearchABookByIdActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity android:name=".activities.SubjectResult"></activity>
     </application>
+
 </manifest>
